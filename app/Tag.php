@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-//Relationships
+    protected $fillable = ['title'];
+    public $timestamps = false;
+
+
+    //Relations
 
     public function articles()
     {
