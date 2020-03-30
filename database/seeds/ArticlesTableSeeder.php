@@ -12,6 +12,12 @@ class ArticlesTableSeeder extends Seeder
      */
     public function run()
     {
-         factory(Article::class, 10)->create();
+        factory(Article::class, 10)->create()->each(function ($article) {
+
+            $article->tags()->attach(rand(1, 9));
+            $article->tags()->attach(rand(10, 19));
+            $article->tags()->attach(rand(20, 30));
+
+        });
     }
 }

@@ -12,7 +12,7 @@ class CategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        Category::create(['title' => 'Games']);
+        Category::create(['title' => 'Gaming']);
         Category::create(['title' => 'Events']);
         Category::create(['title' => 'Esports']);
 

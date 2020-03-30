@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
+@section('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <articles></articles>
         </div>
-    @endif
-
-    <div class="content">
-        <div>
-            Laravel
-        </div>
-        <h1>Hello wooooorrllddd !!</h1>
+        @auth
+            <p>from here is the content that is only visible to authorized users</p>
+        @endauth
     </div>
-</div>
-</body>
-</html>
+@endsection
