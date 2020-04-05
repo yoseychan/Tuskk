@@ -14,7 +14,7 @@ html, body {
 .section-title {
     color: $section-color;
     opacity: .36;
-    padding: 30px 15px;
+    padding: 30px 15px 15px;
 }
 
 //Accent
@@ -142,6 +142,48 @@ html, body {
 
     a:hover {
         color: $light-purple;
+    }
+}
+//Comments
+
+.comment {
+    max-width:800px;
+    min-height: 200px;
+
+}
+.comment-article-body  {
+    p{
+        display: inline-block;
+        margin: 0;
+        text-align: left;
+    }
+
+}
+.comment-article-body {
+    background-color: $body-bg;
+    margin: 20px 0;
+    padding: 10px;
+
+    .username {
+        color: $light-purple;
+        font-size: 20px;
+        margin:0;
+        padding:0;
+    }
+    .time {
+        font-size: 12px;
+        color: $dark-purple
+    }
+    .content {
+        padding: 15px 0;
+        font-size: 16px;
+        color: $light-purple;
+        border-bottom: 1px solid $light-ink;
+    }
+    .first-comment{
+        color: $section-color;
+        opacity: .4;
+
     }
 }
 

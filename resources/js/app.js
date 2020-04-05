@@ -31,9 +31,9 @@ window.moment = require('moment');
 Vue.component('featured', require('./components/FeaturedComponent.vue').default);
 Vue.component('larticles', require('./components/LatestArticlesComponent.vue').default);
 Vue.component('articles', require('./components/ArticlesComponent.vue').default);
-Vue.component('single', require('./components/ArticleComponent.vue').default);
+Vue.component('singlearticle', require('./components/ArticleComponent.vue').default);
 Vue.component('comments', require('./components/CommentsComponent.vue').default);
-Vue.component('commentsform', require('./components/ComementsFormComponent.vue').default);
+Vue.component('commentsform', require('./components/CommentsFormComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -6,7 +6,7 @@
         <div class="row row-cols-1 row-cols-md-3">
 
             <div v-for="(article, i) in articles" :key="i">
-                <div class="col  latest ">
+                <div class="col latest ">
                     <div class="card card-latest">
                         <img class="card-img-top cimg" v-bind:src="article.image" alt=" "/>
                         <div class="card-body">
@@ -18,7 +18,7 @@
                             </div>
 
                             <div class="card-details">
-                                <p><span class="material-icons">query_builder</span> {{ article.created_at }}</p>
+                                <p><span class="material-icons">query_builder</span> {{ relativeDate(article.created_at)}}</p>
                                 <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}</p>
                                 <p><span class="material-icons">favorite_border</span> 3hc</p>
                                 <p><span class="material-icons">bookmark_outline</span> {{ article.category.title }}
@@ -55,6 +55,10 @@
                 this.articles = response.data;
             });
         },
-        computed: {}
+         methods: {
+             relativeDate(dt) {
+                return moment(dt).fromNow();
+            },
+        }
     }
 </script>

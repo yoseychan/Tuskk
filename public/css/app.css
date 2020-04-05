@@ -10978,7 +10978,7 @@ body {
 .section-title {
   color: #ABA0AF;
   opacity: 0.36;
-  padding: 30px 15px;
+  padding: 30px 15px 15px;
 }
 
 .accent {
@@ -11097,6 +11097,47 @@ body {
 
 .card-tags a:hover {
   color: #CEC2D2;
+}
+
+.comment {
+  max-width: 800px;
+  min-height: 200px;
+}
+
+.comment-article-body p {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+}
+
+.comment-article-body {
+  background-color: #221D24;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.comment-article-body .username {
+  color: #CEC2D2;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-article-body .time {
+  font-size: 12px;
+  color: #918397;
+}
+
+.comment-article-body .content {
+  padding: 15px 0;
+  font-size: 16px;
+  color: #CEC2D2;
+  border-bottom: 1px solid rgba(121, 135, 255, 0.5);
+}
+
+.comment-article-body .first-comment {
+  color: #ABA0AF;
+  opacity: 0.4;
 }
 
 .hero-img-featured {

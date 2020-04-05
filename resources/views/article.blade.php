@@ -3,14 +3,16 @@
 
 @section('content')
     <div>
-        <single data-article="{{json_encode($article)}}"></single>
+        <singlearticle data-article="{{json_encode($article)}}"></singlearticle>
     </div>
-    <div class="container-xl">
+
+    <div class="container-xl ">
         <h3 class="section-title">Comments</h3>
+
 {{--        @auth--}}
 {{--        <commentform></commentform>--}}
 {{--        @endauth--}}
-{{--        <comments></comments>--}}
+        <comments data-comment="{{json_encode($article)}}"></comments>
     </div>
 
 
