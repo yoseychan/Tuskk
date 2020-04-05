@@ -1,10 +1,10 @@
 <template>
     <div class="hero featured">
-        <div class="hero-img">
+        <div class="hero-img hero-img-featured">
             <img
                 src="https://images.unsplash.com/photo-1494972688394-4cc796f9e4c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                 alt="">
-            <div class="featured-text">
+            <div class="text-article text-article-featured">
                 <h5 class="accent category">Gaming | Hardcoded </h5>
                 <h1 class="title">Attention, this is a hard-coded section.</h1>
                 <div class="card-details">

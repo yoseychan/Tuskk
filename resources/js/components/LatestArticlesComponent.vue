@@ -1,20 +1,19 @@
 <template>
-    <div>
+    <div id="articles">
 
         <h4 class="section-title">Latest articles</h4>
 
         <div class="row row-cols-1 row-cols-md-3">
 
             <div v-for="(article, i) in articles" :key="i">
-                <div class="col mb-4 ">
-
-                    <div class="card text-center">
+                <div class="col  latest ">
+                    <div class="card card-latest">
                         <img class="card-img-top cimg" v-bind:src="article.image" alt=" "/>
                         <div class="card-body">
 
                             <div class="card-title">
                                 <h4>
-                                    <a :href="'/articles/' + article.id">{{ article.title }} {{ article.id }}</a>
+                                    <a :href="'/articles/' + article.id">{{ article.title }}</a>
                                 </h4>
                             </div>
 

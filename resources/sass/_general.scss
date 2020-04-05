@@ -1,4 +1,4 @@
-@import "variables";
+@import "partials/variables";
 
 html, body {
     background-color: $body-bg;
@@ -33,10 +33,117 @@ html, body {
     margin-top: 200px;
 }
 
+//Hero Universal
+.featured {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.hero-img {
+    z-index: 10;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        opacity: .15;
+    }
+}
+
+.text-article {
+    max-width: 600px;
+    position: absolute;
+    font-size: 18px;
+}
 
 
+//Cards Universal
 
+.card {
+    padding: 10px;
+    background-color: $body-bg;
+    border: none;
+    margin-bottom: 40px;
+    transition: .6s;
+}
 
+.card:hover {
+    -webkit-box-shadow: 5px 5px 24px 2px $purple;
+    -moz-box-shadow: 5px 5px 24px 2px $purple;
+    box-shadow: 5px 5px 24px 2px $purple;
+}
+
+.card-body {
+    text-align: left;
+    padding: 0;
+}
+
+.card-title {
+    font-size: 18px;
+    padding: 7px 0 0;
+    text-align: left;
+    min-height: 50px;
+
+    a {
+        text-decoration: none;
+        color: $white;
+        transition: .6s;
+    }
+
+    a:hover {
+        color: $magenta;
+    }
+}
+
+.card-details {
+    color: $dark-purple;
+    font-size: 12px;
+    text-align: left;
+
+    .material-icons {
+        font-size: 12px;
+    }
+}
+
+.card-details > * {
+    display: inline-block;
+    padding: 0 7px;
+}
+
+.card-text {
+    color: $light-purple;
+
+}
+
+.card-excerpt {
+    min-height: 69px;
+}
+
+.card-author {
+    color: $dark-purple;
+    font-style: italic;
+
+    .author {
+        color: $ink;
+        text-align: left;
+    }
+}
+
+.card-tags {
+    display: inline-block;
+    padding: 0 5px;
+
+    a {
+        text-decoration: none;
+        color: $dark-purple;
+        transition: .6s;
+
+    }
+
+    a:hover {
+        color: $light-purple;
+    }
+}
 
 
 

@@ -1,0 +1,68 @@
+@import "partials/variables";
+
+//Article list
+.spacer {
+    height: 80px;
+    width: 100%;
+}
+
+.title-articles {
+    color: $light-purple;
+    opacity: 1;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.card-body-articles {
+    padding-left: 15px;
+
+    .card-title {
+        overflow: hidden;
+
+        h4, p {
+            display: inline-block;
+        }
+
+        p {
+            float: right;
+        }
+    }
+}
+
+.card-articles {
+    border-left: 5px solid $light-ink;
+    padding: 0 5px 0 0;
+}
+
+.card-articles-category {
+    font-size: 15px;
+    color: $light-purple;
+    text-align: right;
+
+    .material-icons {
+        font-size: 15px;
+    }
+}
+
+//Article
+
+.hero-img-article {
+
+    img {
+        max-height: 400px;
+        min-height: 400px;
+    }
+
+    .text-article-single {
+        //max-width: 500px;
+        bottom: 10%;
+        left: 10%;
+    }
+}
+.body-article {
+    font-size: 18px;
+    margin: 30px 10%;
+}
+.card-author-article {
+    margin: 20px 0;
+}

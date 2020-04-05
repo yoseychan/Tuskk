@@ -7,9 +7,6 @@
             <div class="row justify-content-center">
                 <larticles></larticles>
             </div>
-            @auth
-                <p>from here is the content that is only visible to authorized users</p>
-            @endauth
         </div>
     </div>
     <div class="banner">

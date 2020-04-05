@@ -16,7 +16,15 @@ class ApiArticlesController extends Controller
 
     }
 
+    public function show($id)
+    {
+         return Article::where('id', $id)->with(['user', 'category', 'tags', 'comments' => function ($query) {
+            $query->with(['user'])->orderBy('created_at', 'desc');
+        }])->orderBy('created_at', 'desc')->first();
 
+
+
+    }
     public function latest()
     {
 
@@ -26,6 +34,6 @@ class ApiArticlesController extends Controller
 
     }
 
-    
+
 
 }
