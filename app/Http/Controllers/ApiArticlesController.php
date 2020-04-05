@@ -10,11 +10,22 @@ class ApiArticlesController extends Controller
     public function index()
     {
 
-        return Article::with(['user','category', 'tags', 'comments' => function ($query) {
+        return Article::with(['user', 'category', 'tags', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->get();
+
     }
 
-    //$article = Article::with('user', 'category', 'comment', 'tags')->orderBy('created_at', 'desc')->get();
-    //return view('home', compact('articles'));
+
+    public function latest()
+    {
+
+        return Article::with(['user', 'category', 'tags', 'comments' => function ($query) {
+            $query->with(['user'])->orderBy('created_at', 'desc');
+        }])->orderBy('created_at', 'desc')->limit(3)->get();
+
+    }
+
+    
+
 }
