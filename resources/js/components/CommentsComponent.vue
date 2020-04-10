@@ -1,11 +1,12 @@
 <template>
-    <div class="row justify-content-center ">
+    <div class="row">
         <div class="comment-article-body comment" v-if="comments.length === 0">
             <div class="first-comment">
-                 <p> Be the first one to comment on this post!</p>
+                <p > Be the first one to comment on this post!</p>
             </div>
         </div>
-         <div v-else class="comment-article-body" v-for="comment in comments">
+        <div class="row comment" v-else v-for="comment in comments">
+            <div class="comment-article-body">
                 <div class="username">
                     <p>{{ comment.user.name }}</p>
                 </div>
@@ -16,6 +17,7 @@
                     <p>{{ comment.content }}</p>
                 </div>
             </div>
+        </div>
     </div>
 </template>
 
@@ -31,14 +33,15 @@
         mounted() {
             this.article = JSON.parse(this.dataComment);
             this.comments = this.article.comments;
-            console.log(this.comments);
+            EventBus.$on('comment-submitted', (comment) => {
+                this.comments.unshift(comment);
+            });
         },
         methods: {
             relativeDate(dt) {
                 return moment(dt).fromNow();
-            },
-
-        }
+            }
+        },
     }
 </script>
 

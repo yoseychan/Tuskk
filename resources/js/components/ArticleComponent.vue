@@ -36,15 +36,29 @@
         props: ["dataArticle"],
         data() {
             return {
-                article: []
+                article: {
+                    category: {
+                        title: ""
+                    },
+                    comments: [
+
+                    ],
+                    user: {
+                        id: "",
+                        name: ""
+                    }
+
+                }
+
             }
         },
         mounted() {
             this.article = JSON.parse(this.dataArticle);
+
         },
         methods: {
              relativeDate(dt) {
-                return moment().format('lll');
+               return moment(dt).fromNow()  ;
             },
             relativeDateTwo(dt) {
                 return moment(dt).format('ll');

@@ -39,17 +39,17 @@
                 <ul class="navbar-nav mr-auto"></ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto " >
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('articles') }}">Articles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Categories</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
+                    <li class="nav-item" >
+                        <a class="nav-link" id="nav-separator" href="#">Team</a>
                     </li>
-                    <li class="nav-item nav-link special-nav"> |</li>
+{{--                    <li class="nav-item nav-link special-nav"> |</li>--}}
 
 
                     <!-- Authentication Links -->

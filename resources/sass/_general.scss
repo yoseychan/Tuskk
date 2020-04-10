@@ -144,48 +144,115 @@ html, body {
         color: $light-purple;
     }
 }
+
 //Comments
+.comment-section {
+    margin-bottom: 50px;
+}
 
 .comment {
-    max-width:800px;
-    min-height: 200px;
-
+    padding: 0 20px;
+    display: block;
+    width: 90%;
 }
-.comment-article-body  {
-    p{
+
+.comment-article-body {
+    display: block;
+    min-width: 100% ;
+    p {
         display: inline-block;
         margin: 0;
         text-align: left;
     }
 
 }
+.comment-special {
+    width: 50%;
+}
 .comment-article-body {
     background-color: $body-bg;
     margin: 20px 0;
     padding: 10px;
+    display: block;
+    overflow: hidden;
 
     .username {
         color: $light-purple;
         font-size: 20px;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
     }
+
     .time {
         font-size: 12px;
         color: $dark-purple
     }
+
     .content {
         padding: 15px 0;
         font-size: 16px;
         color: $light-purple;
         border-bottom: 1px solid $light-ink;
     }
-    .first-comment{
+
+    .first-comment {
         color: $section-color;
         opacity: .4;
 
     }
+
+    textarea {
+        width: 100%;
+        min-height: 100px;
+        border: 2px solid $purple;
+        border-radius: 5px;
+        background-color: $purple;
+        color: $light-purple;
+        transition: .6s;
+        padding: 10px 20px;
+    }
+
+    textarea::placeholder {
+        text-align: center;
+        padding-top: 30px;
+        transition: .6s;
+    }
+
+    textarea:focus {
+        outline: none;
+        border: 1px solid $magenta;
+        transition: .6s;
+
+    }
+
+    textarea:focus::placeholder {
+        opacity: 0;
+    }
+
+    button {
+        margin-top:20px;
+        float: right;
+        width: 100px;
+        border: 1px solid $purple;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: $purple;
+        color: $dark-purple;
+        transition: .6s;
+    }
+    button:focus {
+    outline: none;
+    }
+
+    button:hover {
+        border: 1px solid $magenta;
+        color: $magenta;
+    }
+
 }
+    .alert {
+        color: salmon;
+    }
 
 
 

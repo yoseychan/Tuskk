@@ -22,4 +22,6 @@ Route::middleware('api')->get('articles/latest', 'ApiArticlesController@latest')
 Route::middleware('api')->get('articles', 'ApiArticlesController@index');
 Route::middleware('api')->get('articles/{id}', 'ApiArticlesController@show');
 
+Route::middleware('auth:api')->post('comments', 'ApiCommentsController@store');
+
 

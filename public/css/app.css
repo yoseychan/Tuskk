@@ -10929,6 +10929,10 @@ a.text-dark:focus {
   z-index: 100;
 }
 
+#nav-separator::after {
+  content: " | ";
+}
+
 footer {
   background-color: #18131A;
 }
@@ -11099,9 +11103,19 @@ body {
   color: #CEC2D2;
 }
 
+.comment-section {
+  margin-bottom: 50px;
+}
+
 .comment {
-  max-width: 800px;
-  min-height: 200px;
+  padding: 0 20px;
+  display: block;
+  width: 90%;
+}
+
+.comment-article-body {
+  display: block;
+  min-width: 100%;
 }
 
 .comment-article-body p {
@@ -11110,10 +11124,16 @@ body {
   text-align: left;
 }
 
+.comment-special {
+  width: 50%;
+}
+
 .comment-article-body {
   background-color: #221D24;
   margin: 20px 0;
   padding: 10px;
+  display: block;
+  overflow: hidden;
 }
 
 .comment-article-body .username {
@@ -11138,6 +11158,102 @@ body {
 .comment-article-body .first-comment {
   color: #ABA0AF;
   opacity: 0.4;
+}
+
+.comment-article-body textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid #18131A;
+  border-radius: 5px;
+  background-color: #18131A;
+  color: #CEC2D2;
+  transition: 0.6s;
+  padding: 10px 20px;
+}
+
+.comment-article-body textarea::-webkit-input-placeholder {
+  text-align: center;
+  padding-top: 30px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea::-moz-placeholder {
+  text-align: center;
+  padding-top: 30px;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea:-ms-input-placeholder {
+  text-align: center;
+  padding-top: 30px;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea::-ms-input-placeholder {
+  text-align: center;
+  padding-top: 30px;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea::placeholder {
+  text-align: center;
+  padding-top: 30px;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea:focus {
+  outline: none;
+  border: 1px solid #F64D76;
+  transition: 0.6s;
+}
+
+.comment-article-body textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.comment-article-body textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.comment-article-body textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.comment-article-body textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.comment-article-body textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.comment-article-body button {
+  margin-top: 20px;
+  float: right;
+  width: 100px;
+  border: 1px solid #18131A;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #18131A;
+  color: #918397;
+  transition: 0.6s;
+}
+
+.comment-article-body button:focus {
+  outline: none;
+}
+
+.comment-article-body button:hover {
+  border: 1px solid #F64D76;
+  color: #F64D76;
+}
+
+.alert {
+  color: salmon;
 }
 
 .hero-img-featured {
@@ -11283,6 +11399,7 @@ body {
 
 .body-article {
   font-size: 18px;
+  color: #CEC2D2;
   margin: 30px 10%;
 }
 

@@ -172,7 +172,9 @@
       <option name="presentableId" value="Default" />
       <updated>1586016486340</updated>
       <workItem from="1586016490078" duration="26845000" />
-      <workItem from="1586087759677" duration="37542000" />
+      <workItem from="1586087759677" duration="38698000" />
+      <workItem from="1586172322048" duration="26598000" />
+      <workItem from="1586251633661" duration="5586000" />
     </task>
     <servers />
   </component>
@@ -192,9 +194,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586027700582" />
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1586111034479">
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1586252285794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586111034479" />
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586252285794" />
   </component>
 </project>
