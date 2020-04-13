@@ -34,6 +34,9 @@ Vue.component('articles', require('./components/ArticlesComponent.vue').default)
 Vue.component('singlearticle', require('./components/ArticleComponent.vue').default);
 Vue.component('comments', require('./components/CommentsComponent.vue').default);
 Vue.component('commentsform', require('./components/CommentsFormComponent.vue').default);
+Vue.component('newarticle', require('./components/NewArticleComponent').default);
+Vue.component('categories', require('./components/CategoriesComponent').default);
+Vue.component('category', require('./components/CategoryComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

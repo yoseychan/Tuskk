@@ -21,7 +21,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware('api')->get('articles/latest', 'ApiArticlesController@latest');
 Route::middleware('api')->get('articles', 'ApiArticlesController@index');
 Route::middleware('api')->get('articles/{id}', 'ApiArticlesController@show');
+Route::middleware('api')->get('article/featured', 'ApiArticlesController@featured');
+Route::middleware('auth:api')->post('/articles', 'ApiArticlesController@store');
+
+Route::middleware('api')->get('categories', 'ApiCategoriesController@index');
+Route::middleware('api')->get('categories/{title}', 'ApiCategoriesController@show');
 
 Route::middleware('auth:api')->post('comments', 'ApiCommentsController@store');
+
+Route::middleware('api')->post('/image/upload', 'ApiImageUpload@uploadImage');
+
 
 

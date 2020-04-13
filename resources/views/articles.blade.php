@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <div>
+    <div class="container-xl">
+        <div class="spacer"></div>
+        <a href="/article/new">+ New Article</a>
         <articles></articles>
     </div>
 

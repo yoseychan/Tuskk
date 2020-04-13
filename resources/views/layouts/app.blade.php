@@ -39,20 +39,20 @@
                 <ul class="navbar-nav mr-auto"></ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto " >
+                <ul class="navbar-nav ml-auto ">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('articles') }}">Articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Categories</a>
+                        <a class="nav-link" href="{{ url('categories') }}">Categories</a>
                     </li>
-                    <li class="nav-item" >
-                        <a class="nav-link" id="nav-separator" href="#">Team</a>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-separator" href="{{ url('team') }}">Team</a>
                     </li>
-{{--                    <li class="nav-item nav-link special-nav"> |</li>--}}
+                {{--                    <li class="nav-item nav-link special-nav"> |</li>--}}
 
 
-                    <!-- Authentication Links -->
+                <!-- Authentication Links -->
                     @guest
 
                         <li class="nav-item">
@@ -99,8 +99,8 @@
                 <div class="menu ">
                     <p>Menu</p>
                     <ul>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="{{ url('articles') }}">Articles</a></li>
+                        <li><a href="{{ url('categories') }}">Categories</a></li>
                         <li><a href="#">Esports</a></li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Register Now</a></li>
@@ -109,8 +109,8 @@
                 <div class="menu">
                     <p>Menu</p>
                     <ul>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="{{ url('articles') }}">Articles</a></li>
+                        <li><a href="{{ url('categories') }}">Categories</a></li>
                         <li><a href="#">Esports</a></li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Register Now</a></li>
@@ -119,8 +119,8 @@
                 <div class="menu">
                     <p>Menu</p>
                     <ul>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="{{ url('articles') }}">Articles</a></li>
+                        <li><a href="{{ url('categories') }}">Categories</a></li>
                         <li><a href="#">Esports</a></li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Register Now</a></li>
@@ -129,8 +129,8 @@
                 <div class="menu">
                     <p>Menu</p>
                     <ul>
-                        <li><a href="#">Articles</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><a href="{{ url('articles') }}">Articles</a></li>
+                        <li><a href="{{ url('categories') }}">Categories</a></li>
                         <li><a href="#">Esports</a></li>
                         <li><a href="#">Login</a></li>
                         <li><a href="#">Register Now</a></li>

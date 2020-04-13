@@ -7,8 +7,15 @@ html, body {
     font-weight: 200;
     height: 100vh;
     margin: 0;
-    //overflow-y: hidden;
+}
 
+a:-webkit-any-link {
+    color: $light-purple;
+    cursor: pointer;
+    text-decoration: none;
+}
+.main {
+    min-height: 800px;
 }
 
 .section-title {
@@ -145,114 +152,84 @@ html, body {
     }
 }
 
-//Comments
-.comment-section {
-    margin-bottom: 50px;
+
+.alert {
+    color: salmon;
 }
 
-.comment {
-    padding: 0 20px;
-    display: block;
-    width: 90%;
-}
 
-.comment-article-body {
-    display: block;
-    min-width: 100% ;
-    p {
-        display: inline-block;
-        margin: 0;
-        text-align: left;
-    }
 
-}
-.comment-special {
-    width: 50%;
-}
-.comment-article-body {
-    background-color: $body-bg;
-    margin: 20px 0;
-    padding: 10px;
-    display: block;
-    overflow: hidden;
+//category buttons
 
-    .username {
-        color: $light-purple;
-        font-size: 20px;
-        margin: 0;
-        padding: 0;
-    }
+.brk-btn {
+    position: relative;
+    background: none;
+    color: $light-purple;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid $light-purple;
+    padding: 20px 40px;
+    width: 400px;
+    transition: .6s;
+    font-size: 20px;
 
-    .time {
-        font-size: 12px;
-        color: $dark-purple
-    }
+    a {
+        text-decoration: none;
 
-    .content {
-        padding: 15px 0;
-        font-size: 16px;
-        color: $light-purple;
-        border-bottom: 1px solid $light-ink;
-    }
-
-    .first-comment {
-        color: $section-color;
-        opacity: .4;
-
-    }
-
-    textarea {
-        width: 100%;
-        min-height: 100px;
-        border: 2px solid $purple;
-        border-radius: 5px;
-        background-color: $purple;
-        color: $light-purple;
-        transition: .6s;
-        padding: 10px 20px;
-    }
-
-    textarea::placeholder {
         text-align: center;
-        padding-top: 30px;
-        transition: .6s;
-    }
 
-    textarea:focus {
-        outline: none;
-        border: 1px solid $magenta;
-        transition: .6s;
 
     }
 
-    textarea:focus::placeholder {
-        opacity: 0;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: $body-bg;
+        height: 0.3em;
+        right: 20%;
+        top: -0.21em;
+        transform: skewX(-45deg);
+        -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
-    button {
-        margin-top:20px;
-        float: right;
-        width: 100px;
-        border: 1px solid $purple;
-        border-radius: 5px;
-        padding: 5px 10px;
-        background-color: $purple;
-        color: $dark-purple;
-        transition: .6s;
-    }
-    button:focus {
-    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        background: $body-bg;
+        height: 0.3em;
+        left: 20%;
+        bottom: -0.25em;
+        transform: skewX(45deg);
+        -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
-    button:hover {
-        border: 1px solid $magenta;
+    &:hover {
+        border-color: $magenta;
         color: $magenta;
+
+        &::before {
+            right: 80%;
+        }
+
+        &::after {
+            left: 80%;
+        }
     }
 
 }
-    .alert {
-        color: salmon;
-    }
 
+.btn-space {
+    margin: 40px 0;
+}
+
+.categories {
+    margin: 40px 0;
+}
 
 

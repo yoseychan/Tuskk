@@ -1,6 +1,6 @@
 <template>
     <div class="container-xl">
-        <div class="spacer"></div>
+
         <h1 class="section-title title-articles">Articles</h1>
         <div class="card mb-12 card-articles " v-for="(article,i) in articles" :key="i">
             <div class="row no-gutters justify-content-center ">

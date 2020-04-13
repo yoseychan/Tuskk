@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
 
-    protected $fillable = [ 'title', 'body', 'excerpt', 'image', 'user_id', 'category_id'];
+    protected $fillable = [ 'title', 'body', 'excerpt', 'image', 'featured', 'user_id', 'category_id'];
 
 
     //Relations

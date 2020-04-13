@@ -151,8 +151,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Tuskk\resources\sass\partials" />
       <recent name="C:\laragon\www\Tuskk\resources\views" />
+      <recent name="C:\laragon\www\Tuskk\resources\sass\partials" />
     </key>
   </component>
   <component name="RunManager">
@@ -175,6 +175,7 @@
       <workItem from="1586087759677" duration="38698000" />
       <workItem from="1586172322048" duration="26598000" />
       <workItem from="1586251633661" duration="5586000" />
+      <workItem from="1586775483491" duration="27215000" />
     </task>
     <servers />
   </component>
@@ -182,10 +183,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="684" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586027097303">
+    <state x="684" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586778290008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="684" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586027097303" />
+    <state x="684" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586778290008" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586027121254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -22,9 +22,8 @@ class ApiArticlesController extends Controller
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->first();
 
-
-
     }
+
     public function latest()
     {
 
@@ -32,6 +31,19 @@ class ApiArticlesController extends Controller
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->limit(3)->get();
 
+    }
+
+    public function featured()
+    {
+        return Article::where('featured', '1')-> with(['user', 'category', 'tags', 'comments' => function ($query) {
+            $query->with(['user'])->orderBy('created_at', 'desc');
+        }])->orderBy('created_at', 'desc')->limit(1)->first();
+    }
+
+     public function store(Request $request)
+    {
+        $request->merge(["user_id" => \Auth::user()->id]);
+        Article::create($request->all());
     }
 
 

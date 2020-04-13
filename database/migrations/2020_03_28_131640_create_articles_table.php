@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->text('body');
             $table->text('excerpt');
             $table->string('image');
+            $table->boolean('featured')->default('0');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('category_id')->unsigned();
             $table->timestamps();

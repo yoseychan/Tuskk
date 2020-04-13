@@ -1,5 +1,5 @@
 <template>
-    <div id="articles">
+    <div id="articles main">
 
         <h4 class="section-title">Latest articles</h4>
 
