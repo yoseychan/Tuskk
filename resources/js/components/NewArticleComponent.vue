@@ -16,6 +16,7 @@
                                 class="upload-demo"
                                 drag
                                 action="/api/image/upload"
+                                :headers="headers"
                                 :on-success="handleUpload">
                                 <img v-if="form.image" :src="form.image" class="">
                                 <div v-else>
@@ -66,6 +67,7 @@
                     featured: "",
                     category_id: ""
                 },
+                headers: {'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content},
             }
         },
         methods: {
@@ -74,7 +76,10 @@
             },
             submitForm() {
 
-                axios.post("/api/articles", this.form);
+                axios.post("/api/articles", this.form)
+                    .then((response) => {
+                        window.location.href = '/home';
+                    })
             }
         },
         mounted() {

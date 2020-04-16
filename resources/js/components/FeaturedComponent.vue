@@ -15,7 +15,7 @@
                 </div>
                 <div class="feature-link">
                     <div class="fl-left"><a :href="/articles/ + article.id" >Read more</a></div>
-                    <div class="fl-right"><a :href="/categories/ + article.category.title" >More gaming news</a></div>
+                    <div class="fl-right"><a :href="/categories/ + article.category.title" >More {{ article.category.title }} news</a></div>
                 </div>
             </div>
         </div>

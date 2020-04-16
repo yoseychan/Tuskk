@@ -44,6 +44,7 @@ class ApiArticlesController extends Controller
     {
         $request->merge(["user_id" => \Auth::user()->id]);
         Article::create($request->all());
+
     }
 
 

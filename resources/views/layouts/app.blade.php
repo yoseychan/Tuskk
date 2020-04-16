@@ -49,10 +49,8 @@
                     <li class="nav-item">
                         <a class="nav-link" id="nav-separator" href="{{ url('team') }}">Team</a>
                     </li>
-                {{--                    <li class="nav-item nav-link special-nav"> |</li>--}}
 
-
-                <!-- Authentication Links -->
+                    <!-- Authentication Links -->
                     @guest
 
                         <li class="nav-item">
@@ -72,12 +70,20 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                 @can('manage-users', Auth::user())
+                                    <a class="dropdown-item" href="{{ url('admin/users') }}">Manage users</a>
+                                @endcan
+                                @can('manage-article', Auth::user())
+                                    <a class="dropdown-item" href="{{ url('users/'. Auth::user()->id) }}">My
+                                        Articles</a>
+                                    <a class="dropdown-item" href="{{ url('article/create')}}">New Article</a>
+                                @endcan
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                       style="display: none;">
                                     @csrf

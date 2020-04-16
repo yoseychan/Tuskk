@@ -34,9 +34,11 @@ Vue.component('articles', require('./components/ArticlesComponent.vue').default)
 Vue.component('singlearticle', require('./components/ArticleComponent.vue').default);
 Vue.component('comments', require('./components/CommentsComponent.vue').default);
 Vue.component('commentsform', require('./components/CommentsFormComponent.vue').default);
-Vue.component('newarticle', require('./components/NewArticleComponent').default);
-Vue.component('categories', require('./components/CategoriesComponent').default);
-Vue.component('category', require('./components/CategoryComponent').default);
+Vue.component('newarticle', require('./components/NewArticleComponent.vue').default);
+Vue.component('categories', require('./components/CategoriesComponent.vue').default);
+Vue.component('category', require('./components/CategoryComponent.vue').default);
+Vue.component('team', require('./components/TeamComponent.vue').default);
+Vue.component('profile', require('./components/ProfileComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

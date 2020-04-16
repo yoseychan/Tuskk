@@ -28,7 +28,7 @@
 
                         <div class="card-text ">
                             <p class="card-excerpt">{{ article.excerpt }}</p>
-                            <p class="card-author">By <a :href="'users/' + article.user.id" class="author">{{
+                            <p class="card-author">By <a :href="'authors/' + article.user.id" class="author">{{
                                 article.user.name }}</a> on {{ relativeDateTwo(article.created_at) }}</p>
                             <div class="card-tags" v-for="(tag, j) in article.tags" :key="j">
                                 <span class="accent">#</span><a href="#">{{ tag.title }}</a>

@@ -31,5 +31,9 @@ Route::middleware('auth:api')->post('comments', 'ApiCommentsController@store');
 
 Route::middleware('api')->post('/image/upload', 'ApiImageUpload@uploadImage');
 
+Route::middleware('api')->get('/authors', 'ApiUsersController@index');
+
+
+
 
 

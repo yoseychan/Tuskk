@@ -16,6 +16,7 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
     ];
+
     /**
      * Register any authentication / authorization services.
      *
@@ -25,7 +26,20 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        //AUTHORS AND ADMINS
+
+        Gate::define('manage-article', function ($user) {
+            return ($user->role_id <= 2);
+        });
+
+        //ONLY ADMINS
+
+        Gate::define('manage-users', function ($user) {
+            return ($user->role_id == 1);
+        });
+
+
+
         Passport::routes();
 
     }

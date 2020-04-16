@@ -232,4 +232,37 @@ a:-webkit-any-link {
     margin: 40px 0;
 }
 
+.admin {
+    color: $light-purple;
+}
+
+.action-icon {
+    transition: .6s;
+}
+
+.action-icon:hover {
+    color: $magenta;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th  {
+    background:$purple ;
+    color: $light-purple;
+}
+.table-hover thead tr {
+    background-color: $purple;
+    border-color: $dark-purple;
+}
+
+
+
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $table-line;
+}
+.table th, .table td {
+        border-top: 1px solid $table-line;
+}
+
+
 

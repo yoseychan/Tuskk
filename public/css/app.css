@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Bungee);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -11182,6 +11182,39 @@ a:-webkit-any-link {
   margin: 40px 0;
 }
 
+.admin {
+  color: #CEC2D2;
+}
+
+.action-icon {
+  transition: 0.6s;
+}
+
+.action-icon:hover {
+  color: #F64D76;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background: #18131A;
+  color: #CEC2D2;
+}
+
+.table-hover thead tr {
+  background-color: #18131A;
+  border-color: #918397;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #554657;
+}
+
+.table th,
+.table td {
+  border-top: 1px solid #554657;
+}
+
 .hero-img-featured {
   box-shadow: 0 5px 10px 0 #18131A;
 }
@@ -11480,6 +11513,62 @@ a:-webkit-any-link {
 .comment-article-body button:hover {
   border: 1px solid #F64D76;
   color: #F64D76;
+}
+
+.errorbody {
+  background: #1b1b1b;
+  color: white;
+  font-family: "Bungee", cursive;
+  margin-top: 50px;
+  text-align: center;
+  height: 100vh;
+}
+
+.errorbody a {
+  color: #F64D76;
+  text-decoration: none;
+}
+
+.errorbody a:hover {
+  color: white;
+}
+
+.errorbody svg {
+  width: 50vw;
+}
+
+.errorbody .lightblue {
+  fill: #7987FF;
+}
+
+.errorbody .eye {
+  cx: calc(115px + 30px * var(--mouse-x));
+  cy: calc(50px + 30px * var(--mouse-y));
+}
+
+.errorbody #eye-wrap {
+  overflow: hidden;
+}
+
+.errorbody .error-text {
+  font-size: 120px;
+}
+
+.errorbody .alarm {
+  -webkit-animation: alarmOn 0.5s infinite;
+          animation: alarmOn 0.5s infinite;
+}
+
+@-webkit-keyframes alarmOn {
+  to {
+    fill: #a0133f;
+  }
+}
+
+@keyframes alarmOn {
+  to {
+    fill: #a0133f;
+  }
 }
 
 
