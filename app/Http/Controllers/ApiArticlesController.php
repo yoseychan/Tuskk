@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ApiArticlesController extends Controller
 {
@@ -18,7 +20,7 @@ class ApiArticlesController extends Controller
 
     public function show($id)
     {
-         return Article::where('id', $id)->with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::where('id', $id)->with(['user', 'category', 'tags', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->first();
 
@@ -35,18 +37,35 @@ class ApiArticlesController extends Controller
 
     public function featured()
     {
-        return Article::where('featured', '1')-> with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::where('featured', '1')->with(['user', 'category', 'tags', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->limit(1)->first();
     }
 
-     public function store(Request $request)
+    public function store(Request $request)
     {
         $request->merge(["user_id" => \Auth::user()->id]);
         Article::create($request->all());
 
     }
 
+    public function update(Request $request, $id)
+    {
+
+            return Article::where('id', $id)->update([
+                'title' => $request->input('title'),
+                'body' => $request->input('body'),
+                'excerpt' => $request->input('excerpt'),
+                'category_id' => $request->input('category_id'),
+                'image' => $request->input('image'),
+                'featured' => $request->input('featured'),
+            ]);
+    }
+
+    public function delete($id)
+    {
+        return Article::destroy($id);
+    }
 
 
 }

@@ -11,7 +11,7 @@
 
                             <div class="card-title">
                                 <h4>
-                                    <a :href="'authors/' + author.id">{{ author.name }}</a>
+                                    <a :href="'users/' + author.id">{{ author.name }}</a>
                                 </h4>
                             </div>
 
@@ -37,7 +37,7 @@
             }
         },
         mounted() {
-            axios.get('/api/authors').then((response) => {
+            axios.get('/api/users').then((response) => {
                 this.authors = response.data;
             });
         },

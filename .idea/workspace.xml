@@ -149,18 +149,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public/avatar" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\resources\views" />
+      <recent name="C:\laragon\www\Tuskk\resources\js\components\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\errors" />
       <recent name="C:\laragon\www\Tuskk\resources\sass\errors" />
-      <recent name="C:\laragon\www\Tuskk\resources\sass" />
-      <recent name="C:\laragon\www\Tuskk\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
     </key>
   </component>
   <component name="RunManager">
@@ -185,7 +185,8 @@
       <workItem from="1586251633661" duration="5586000" />
       <workItem from="1586775483491" duration="27215000" />
       <workItem from="1586989282342" duration="3359000" />
-      <workItem from="1587024393851" duration="30796000" />
+      <workItem from="1587024393851" duration="31124000" />
+      <workItem from="1587118625402" duration="33946000" />
     </task>
     <servers />
   </component>
@@ -205,13 +206,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587053392614" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1586027700582">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1587118916481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586027700582" />
-    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1587034412501">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587118916481" />
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1587132021368">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587034412501" />
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587132021368" />
   </component>
 </project>

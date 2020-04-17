@@ -12,7 +12,7 @@
         @auth
             <commentsform data-article="{{json_encode($article)}}"></commentsform>
         @endauth
-        <comments data-comment="{{json_encode($article)}}"></comments>
+        <comments data-comment="{{ json_encode($article) }}" data-user="{{ json_encode(\Auth::user()) }}"></comments>
     </div>
 
 

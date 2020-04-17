@@ -4,9 +4,8 @@
 
     <div class="container-xl main">
         <div class="spacer"></div>
-        <h1 >Profile</h1>
-        <profile data-author="{{json_encode($author)}}"></profile>
+        <profile data-author="{{json_encode($author)}}" data-user="{{ json_encode(\Auth::user()) }}"></profile>
     </div>
 
 
-    @endsection
+@endsection

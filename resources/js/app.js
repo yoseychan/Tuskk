@@ -39,6 +39,9 @@ Vue.component('categories', require('./components/CategoriesComponent.vue').defa
 Vue.component('category', require('./components/CategoryComponent.vue').default);
 Vue.component('team', require('./components/TeamComponent.vue').default);
 Vue.component('profile', require('./components/ProfileComponent.vue').default);
+Vue.component('users', require('./components/admin/UsersComponent.vue').default);
+Vue.component('editarticle', require('./components/EditArticleFormComponent.vue').default);
+Vue.component('edituser', require('./components/admin/EditUserComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

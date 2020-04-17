@@ -24,5 +24,15 @@ class ArticlesController extends Controller
          return view("article", compact("article"));
     }
 
+    public function forEdit($id)
+    {
+         $article = Article::where('id', $id)->with(['user', 'category', 'tags'])->first();
+
+         return view("editarticle",  compact("article"));
+    }
+
+
+
+
 
 }

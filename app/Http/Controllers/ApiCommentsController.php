@@ -14,7 +14,10 @@ class ApiCommentsController extends Controller
 
         return Comment::where('id', $comment->id)->with(['user'])->first();
 
+    }
 
-
+    public function delete($id)
+    {
+        return Comment::destroy($id);
     }
 }

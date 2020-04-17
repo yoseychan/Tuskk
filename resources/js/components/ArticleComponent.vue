@@ -14,7 +14,7 @@
                         <div><span class="material-icons">favorite_border</span>3 likes</div>
                     </div>
                     <div class="card-author-article">
-                        <p class="card-author">By <a :href="'/authors/' + article.user.id" class="author">{{article.user.name
+                        <p class="card-author">By <a :href="'/users/' + article.user.id" class="author">{{article.user.name
                             }}</a> on {{ relativeDateTwo(article.created_at) }}</p>
                     </div>
                 </div>
