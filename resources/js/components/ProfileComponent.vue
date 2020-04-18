@@ -1,9 +1,6 @@
 <template>
     <div>
         <h1 class="section-title title-articles"> {{ author.name }}</h1>
-        <div v-if="user.id == author.id">
-            <a href="/article/create">Add new article</a>
-        </div>
         <div class="card mb-12 card-articles " v-for="(article,i) in articles" :key="i">
             <div class="row no-gutters justify-content-center ">
                 <div class="col-md-4 card-img-articles">
@@ -19,10 +16,14 @@
 
                             </h4>
                             <div class="card-articles-category">
-                                <a class="" :href="'/categories/' + article.category.title"><span class="material-icons ">bookmark_outline</span>
+                                <a class="" :href="'/categories/' + article.category.title"><span
+                                    class="material-icons ">bookmark_outline</span>
                                     {{ article.category.title }}</a>
-                                <p v-if="user.id == author.id" class="card-articles-category" @click="deleteArticle(article.id)" ><span class="material-icons ">delete_sweep</span></p>
-                                <a v-if="user.id == author.id" class="card-articles-category" :href="'/articles/' + article.id + '/edit'" ><span class="material-icons ">edit</span></a>
+                                <p v-if="user.id == author.id" class="card-articles-category"
+                                   @click="deleteArticle(article.id)"><span class="material-icons ">delete_sweep</span>
+                                </p>
+                                <a v-if="user.id == author.id" class="card-articles-category"
+                                   :href="'/articles/' + article.id + '/edit'"><span class="material-icons ">edit</span></a>
                             </div>
                         </div>
 
@@ -30,7 +31,13 @@
                             <p><span class="material-icons">query_builder</span> {{ relativeDate(article.created_at) }}
                             </p>
                             <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}</p>
-                            <p><span class="material-icons">favorite_border</span> 3hc</p>
+                            <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}
+                            </p>
+                            <p class="pointer" @click="like(article.id, i)">
+                                <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
+                                <span v-else class="material-icons">favorite_border</span>
+                                {{ article.likes_count }}
+                            </p>
 
                         </div>
 
@@ -57,7 +64,7 @@
             return {
                 author: [{}],
                 articles: [],
-                user: []
+                user: {}
             }
         },
         mounted() {
@@ -79,6 +86,12 @@
                     .then((response) => {
                         window.location.href = '/users/' + this.author.id;
                     })
+            },
+            like(id, i) {
+                axios.post('/api/articles/like', {id: id}).then((response) => {
+                    this.articles[i].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.articles[i].likes_count = parseInt(response.data.likes_count);
+                })
             }
         }
     }

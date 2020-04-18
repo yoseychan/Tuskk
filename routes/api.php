@@ -43,6 +43,8 @@ Route::middleware('auth:api')->delete('/users/{id}', 'ApiUsersController@delete'
 Route::middleware('auth:api')->get('/users/{id}', 'ApiUsersController@show');
 Route::middleware('auth:api')->put('/users/{id}', 'ApiUsersController@update');
 
+Route::middleware('auth:api')->post('/articles/like', 'ApiArticlesController@like');
+
 
 
 

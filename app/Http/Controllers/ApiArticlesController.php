@@ -67,5 +67,18 @@ class ApiArticlesController extends Controller
         return Article::destroy($id);
     }
 
+     public function like(Request $request)
+    {
+        $article = Article::find($request->id);
+        if ($article->likes()->where('user_id', \Auth::user()->id)->exists()) {
+            $article->likes()->detach(\Auth::user()->id);
+        } else {
+            $article->likes()->attach(\Auth::user()->id);
+        }
+        return [
+            'likes_count' => $article->likes_count,
+            'if_i_liked' => $article->if_i_liked
+        ];
+    }
 
 }

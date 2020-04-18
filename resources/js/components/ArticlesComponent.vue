@@ -22,7 +22,11 @@
                             <p><span class="material-icons">query_builder</span> {{ relativeDate(article.created_at) }}
                             </p>
                             <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}</p>
-                            <p><span class="material-icons">favorite_border</span> 3hc</p>
+                            <p class="pointer" @click="like(article.id, i)">
+                                <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
+                                <span v-else class="material-icons">favorite_border</span>
+                                {{ article.likes_count }}
+                            </p>
 
                         </div>
 
@@ -60,6 +64,12 @@
             relativeDateTwo(dt) {
                 return moment(dt).format('ll');
             },
+            like(id, i) {
+                axios.post('/api/articles/like', {id: id}).then((response) => {
+                    this.articles[i].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.articles[i].likes_count = parseInt(response.data.likes_count);
+                })
+            }
 
         }
     }

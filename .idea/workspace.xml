@@ -152,15 +152,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Tuskk\resources\views" />
       <recent name="C:\laragon\www\Tuskk\resources\js\components\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\errors" />
       <recent name="C:\laragon\www\Tuskk\resources\sass\errors" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,7 +186,8 @@
       <workItem from="1586775483491" duration="27215000" />
       <workItem from="1586989282342" duration="3359000" />
       <workItem from="1587024393851" duration="31124000" />
-      <workItem from="1587118625402" duration="33946000" />
+      <workItem from="1587118625402" duration="37656000" />
+      <workItem from="1587240687306" duration="8385000" />
     </task>
     <servers />
   </component>
@@ -210,9 +211,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587118916481" />
-    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1587132021368">
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1587249607736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587132021368" />
+    <state x="623" y="225" width="672" height="676" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587249607736" />
   </component>
 </project>

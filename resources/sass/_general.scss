@@ -8,11 +8,16 @@ html, body {
     height: 100vh;
     margin: 0;
 }
-
-a:-webkit-any-link {
-    color: $light-purple;
+.pointer {
     cursor: pointer;
+}
+a:-webkit-any-link {
+    //color: $light-purple;
+    //cursor: pointer;
     text-decoration: none;
+}
+a:hover {
+    color:$magenta;
 }
 .main {
     min-height: 800px;
@@ -175,10 +180,7 @@ a:-webkit-any-link {
 
     a {
         text-decoration: none;
-
         text-align: center;
-
-
     }
 
     &::before {
@@ -230,6 +232,7 @@ a:-webkit-any-link {
 
 .categories {
     margin: 40px 0;
+    text-transform: capitalize;
 }
 
 .admin {
@@ -252,8 +255,6 @@ a:-webkit-any-link {
     background-color: $purple;
     border-color: $dark-purple;
 }
-
-
 
 
 .table thead th {

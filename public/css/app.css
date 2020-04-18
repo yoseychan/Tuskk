@@ -10979,10 +10979,16 @@ body {
   margin: 0;
 }
 
-a:-webkit-any-link {
-  color: #CEC2D2;
+.pointer {
   cursor: pointer;
+}
+
+a:-webkit-any-link {
   text-decoration: none;
+}
+
+a:hover {
+  color: #F64D76;
 }
 
 .main {
@@ -11180,6 +11186,7 @@ a:-webkit-any-link {
 
 .categories {
   margin: 40px 0;
+  text-transform: capitalize;
 }
 
 .admin {
@@ -11251,6 +11258,10 @@ a:-webkit-any-link {
   margin-right: 5px;
 }
 
+a.category {
+  text-transform: capitalize;
+}
+
 .feature-link {
   margin-top: 20px;
 }
@@ -11264,11 +11275,21 @@ a:-webkit-any-link {
 .feature-link .fl-left a {
   border: 1px solid #F64D76;
   color: #F64D76;
+  transition: 0.6s;
+}
+
+.feature-link .fl-left a:hover {
+  background-color: #221D24;
 }
 
 .feature-link .fl-right a {
   border: 1px solid #CEC2D2;
   color: #CEC2D2;
+  transition: 0.6s;
+}
+
+.feature-link .fl-right a:hover {
+  background-color: #221D24;
 }
 
 .feature-link a {
@@ -11312,6 +11333,7 @@ a:-webkit-any-link {
   opacity: 1;
   margin-bottom: 50px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .card-body-articles {
@@ -11340,6 +11362,7 @@ a:-webkit-any-link {
   font-size: 15px;
   color: #CEC2D2;
   text-align: right;
+  text-transform: capitalize;
 }
 
 .card-articles-category .material-icons {

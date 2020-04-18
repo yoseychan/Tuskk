@@ -16,7 +16,7 @@
                                 <a :href="'/articles/' + article.id">{{ article.title }}</a>
                             </h4>
                             <p class="card-articles-category"><span class="material-icons ">bookmark_outline</span>
-                                </p>
+                               {{ category.title }} </p>
                         </div>
 
                         <div class="card-details">
@@ -25,7 +25,11 @@
                             </p>
                             <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}
                             </p>
-                            <p><span class="material-icons">favorite_border</span> 3hc</p>
+                            <p @click="like(article.id, i)" class="pointer">
+                            <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
+                            <span v-else class="material-icons">favorite_border</span>
+                            {{ article.likes_count }}
+                        </p>
 
                         </div>
 
@@ -79,6 +83,12 @@
             relativeDateTwo(dt) {
                 return moment(dt).format('ll');
             },
+            like(id, i) {
+                axios.post('/api/articles/like', {id: id}).then((response) => {
+                    this.articles[i].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.articles[i].likes_count = parseInt(response.data.likes_count);
+                })
+            }
 
         }
     }

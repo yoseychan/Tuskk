@@ -11,6 +11,7 @@
     opacity: 1;
     margin-bottom: 50px;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .card-body-articles {
@@ -38,6 +39,7 @@
     font-size: 15px;
     color: $light-purple;
     text-align: right;
+    text-transform: capitalize;
 
     .material-icons {
         font-size: 15px;
