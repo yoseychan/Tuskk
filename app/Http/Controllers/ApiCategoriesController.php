@@ -15,7 +15,7 @@ class ApiCategoriesController extends Controller
     public function show($title)
     {
         return Category::where('title', $title)->with(['articles' => function ($query) {
-            $query->with(['user', 'tags', 'comments',])->orderBy('created_at', 'desc');
+            $query->with(['user', 'comments',])->orderBy('created_at', 'desc');
         }])->first();
     }
 }

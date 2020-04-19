@@ -20,25 +20,18 @@
                             <div class="card-details">
                                 <p><span class="material-icons">query_builder</span> {{
                                     relativeDate(article.created_at)}}</p>
-                                <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}
+                                <p><span class="material-icons">chat_bubble_outline</span>{{ article.comments.length }}
                                 </p>
-                                <p><span @click="like(article.id, index)">
-                            <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
-                            <span v-else class="material-icons">favorite_border</span>
-                            {{ article.likes_count }}
-                        </span></p>
-                                <p><span class="material-icons">bookmark_outline</span> {{ article.category.title }}
-                                </p>
+                                <p class="pointer" @click="like(article.id, index)">
+                                    <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
+                                    <span v-else class="material-icons">favorite_border</span>{{ article.likes_count }}</p>
+                                <a :href="'/categories/' + article.category.title"><span class="accent" >#</span>{{ article.category.title }}</a>
                             </div>
 
                             <div class="card-text ">
                                 <p class="card-excerpt">{{ article.excerpt }}</p>
                                 <p class="card-author">By <a :href="'users/' + article.user.id" class="author">{{
                                     article.user.name }}</a></p>
-                                <div class="card-tags" v-for="(tag, j) in article.tags" :key="j">
-                                    <span class="accent">#</span><a href="#">{{ tag.title }}</a>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -68,8 +61,8 @@
                 return moment(dt).fromNow();
             },
             like(id, index) {
-                axios.post('/api/articles/like', {id : id}).then((response) => {
-                    this.articles[index].if_i_liked = (response.data.if_i_liked == '1')? true : false;
+                axios.post('/api/articles/like', {id: id}).then((response) => {
+                    this.articles[index].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
                     this.articles[index].likes_count = parseInt(response.data.likes_count);
                 })
             }

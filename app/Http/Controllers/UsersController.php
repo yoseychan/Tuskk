@@ -25,7 +25,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $author = User::where('id', $id)->with(['articles' => function ($queryOne) {
-            $queryOne->with(['category', 'tags', 'comments' => function ($queryTwo) {
+            $queryOne->with(['category', 'comments' => function ($queryTwo) {
                 $queryTwo->with(['user'])->orderBy('created_at', 'desc');
             }])->orderBy('created_at', 'desc');
         }])->first();

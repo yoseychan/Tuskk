@@ -15,36 +15,34 @@
                                 <a :href="'/articles/' + article.id">{{ article.title }}</a>
 
                             </h4>
-                            <div class="card-articles-category">
-                                <a class="" :href="'/categories/' + article.category.title"><span
-                                    class="material-icons ">bookmark_outline</span>
-                                    {{ article.category.title }}</a>
+                            <a class="" :href="'/categories/' + article.category.title"><span
+                                class="accent">#</span>
+                                {{ article.category.title }}</a>
 
-                            </div>
                         </div>
 
                         <div class="card-details">
                             <p><span class="material-icons">query_builder</span> {{ relativeDate(article.created_at) }}
                             </p>
                             <p><span class="material-icons">chat_bubble_outline</span> {{ article.comments.length }}</p>
-                            <p><span class="material-icons">favorite_border</span> 3hc</p>
+                            <p class="pointer" @click="like(article.id, i)">
+                                <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
+                                <span v-else class="material-icons">favorite_border</span>
+                                {{ article.likes_count }}
+                            </p>
 
                         </div>
 
                         <div class="card-text ">
                             <p class="card-excerpt">{{ article.excerpt }}</p>
                             <p class="card-author">Published on {{ relativeDateTwo(article.created_at) }}</p>
-                            <div class="card-tags" v-for="(tag, j) in article.tags" :key="j">
-                                <span class="accent">#</span><a href="#">{{ tag.title }}</a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
+
 </template>
 
 <script>
@@ -68,6 +66,12 @@
             relativeDateTwo(dt) {
                 return moment(dt).format('ll');
             },
+            like(id, i) {
+                axios.post('/api/articles/like', {id: id}).then((response) => {
+                    this.articles[i].if_i_liked = (response.data.if_i_liked == '1') ? true : false;
+                    this.articles[i].likes_count = parseInt(response.data.likes_count);
+                })
+            }
 
         }
     }

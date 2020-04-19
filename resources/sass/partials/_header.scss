@@ -4,16 +4,18 @@
     font-family: $brand-font;
     font-size: 28px;
     padding: 10px;
-    height: 40px;
+
 }
 
 .navbar > * {
     color: $white;
 }
-.nav-item{
+
+.nav-item {
     color: $dark-purple;
-     transition: .6s;
+    transition: .6s;
 }
+
 .nav-link {
     font-size: 16px;
 
@@ -27,8 +29,6 @@
 .special-nav:hover {
     border: none;
     color: $dark-purple;
-
-
 }
 
 .header {
@@ -49,11 +49,20 @@
     z-index: 100;
 }
 
-#navbarSupportedContent {
-    // background-color: teal !important;
+
+.dropdown-menu-right {
+    background-color: $body-bg;
+
+    .dropdown-item {
+        color: $dark-purple;
+    }
+
+    .dropdown-item:hover {
+        background-color: $purple;
+    }
 }
 
-#nav-separator::after {
-  content: " | ";
+.show {
+    background-color: $body-bg;
 }
 

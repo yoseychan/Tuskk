@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $appends = ['likes_count', 'if_i_liked'];
-    protected $fillable = ['title', 'body', 'excerpt', 'image', 'featured', 'user_id', 'role_id', 'category_id', 'avatar'];
+    protected $fillable = ['title', 'body', 'excerpt', 'image', 'featured', 'user_id', 'role_id', 'category_id'];
 
 
     //Relations
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -19,11 +20,6 @@ class Article extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
     }
 
     public function comments()

@@ -4,7 +4,8 @@
 @section('content')
     <div class="container-xl  main">
         <div class="spacer"></div>
-        <newarticle></newarticle>
+        <h1 class="title-articles">Create a new article</h1>
+        <newarticle data-user="{{ json_encode(\Auth::user()) }}"></newarticle>
     </div>
 
 

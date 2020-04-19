@@ -1,5 +1,6 @@
 <template>
-    <table class="table admin table-hover">
+    <div class="row justify-content-center">
+        <table class="table admin table-hover center">
             <thead class="">
             <tr>
                 <th scope="col">ID</th>
@@ -11,23 +12,26 @@
             </thead>
             <tbody>
 
-                <tr v-for="(user,i) in users" :key="i">
-                    <th scope="row">{{ user.id }}</th>
-                    <td>{{ user.name }}</td>
-                    <td>{{ user.email }}</td>
-                    <td>{{ user.role_id}}</td>
-                    <td>
-                        <a class="action-icon" :href="'/admin/users/' + user.id + '/edit'">
-                            <span class="material-icons">create</span>
-                        </a>
-                        <p v-if="loggedUser.role_id == 1 && user.role_id !== 1" class=" action-icon"  @click="deleteUser(user.id)">
-                            <span class="material-icons">delete_sweep</span>
-                        </p>
-                    </td>
-                </tr>
+            <tr v-for="(user,i) in users" :key="i">
+                <th scope="row">{{ user.id }}</th>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role_id}}</td>
+                <td class="admin-btn">
+                    <p v-if="loggedUser.role_id == 1 && user.role_id !== 1" class=" action-icon pointer"
+                       @click="deleteUser(user.id)">
+                        <span class="material-icons">delete_sweep</span>
+                    </p>
+                    <a class="action-icon" :href="'/admin/users/' + user.id + '/edit'">
+                        <span class="material-icons pointer ">create</span>
+                    </a>
+
+                </td>
+            </tr>
 
             </tbody>
         </table>
+    </div>
 </template>
 <script>
     export default {
@@ -46,7 +50,7 @@
         },
         methods: {
 
-            deleteUser($id){
+            deleteUser($id) {
                 axios.delete('/api/users/' + $id).then((response) => {
                     window.location.href = '/admin/users';
                 });

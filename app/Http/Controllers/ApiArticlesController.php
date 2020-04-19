@@ -12,7 +12,7 @@ class ApiArticlesController extends Controller
     public function index()
     {
 
-        return Article::with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::with(['user', 'category', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->get();
 
@@ -20,7 +20,7 @@ class ApiArticlesController extends Controller
 
     public function show($id)
     {
-        return Article::where('id', $id)->with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::where('id', $id)->with(['user', 'category', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->first();
 
@@ -29,7 +29,7 @@ class ApiArticlesController extends Controller
     public function latest()
     {
 
-        return Article::with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::with(['user', 'category', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->limit(3)->get();
 
@@ -37,7 +37,7 @@ class ApiArticlesController extends Controller
 
     public function featured()
     {
-        return Article::where('featured', '1')->with(['user', 'category', 'tags', 'comments' => function ($query) {
+        return Article::where('featured', '1')->with(['user', 'category', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->limit(1)->first();
     }

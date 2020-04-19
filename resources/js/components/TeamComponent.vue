@@ -16,8 +16,7 @@
                             </div>
 
                             <div class="card-text ">
-                                <p class="card-excerpt">Joined: </p>
-
+                                <p class="card-excerpt">Joined: {{ relativeDateTwo( author.created_at) }}</p>
                             </div>
                         </div>
                     </div>
@@ -33,7 +32,9 @@
 
         data() {
             return {
-                authors: [],
+                authors: {
+
+                },
             }
         },
         mounted() {
@@ -41,6 +42,10 @@
                 this.authors = response.data;
             });
         },
-        methods: {}
+        methods: {
+            relativeDateTwo(dt) {
+                return moment(dt).format('ll');
+            }
+        }
     }
 </script>

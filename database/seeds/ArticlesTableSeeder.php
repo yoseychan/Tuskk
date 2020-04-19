@@ -23,12 +23,6 @@ class ArticlesTableSeeder extends Seeder
             ]);
 
 
-        factory(Article::class, 10)->create()->each(function ($article) {
-
-            $article->tags()->attach(rand(1, 9));
-            $article->tags()->attach(rand(10, 19));
-            $article->tags()->attach(rand(20, 30));
-
-        });
+        factory(Article::class, 10)->create();
     }
 }

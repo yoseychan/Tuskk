@@ -2,27 +2,24 @@
     <div>
         <div class="row justify-content-center">
             <div class="col-md-12 mb-12">
-                <div class="">
-                    <div class="">
-                        <form class="article-form">
 
-                            <input class="form-control mb-6" placeholder="Name"
-                                   v-model="form.name"></input>
-                            <input type="email" class="form-control mb-6" placeholder="Email"
-                                   v-model="form.email"></input>
+                <form class="article-form form-group">
+
+                    <input class="form-control mb-6" placeholder="Name"
+                           v-model="form.name"></input>
+                    <input type="email" class="form-control mb-6" placeholder="Email"
+                           v-model="form.email"></input>
 
 
-                            <select v-model="form.role_id">
-                                <option v-for="(role,index) in roles" :key="index" :value="role.id"> {{
-                                    role.name }}
-                                </option>
-                            </select>
-                            <div>
-                                <button @click="submitForm(form.id)" type="button" class="submit-button">Save</button>
-                            </div>
-                        </form>
+                    <select class="form-control col-md-4" v-model="form.role_id">
+                        <option v-for="(role,index) in roles" :key="index" :value="role.id"> {{
+                            role.name }}
+                        </option>
+                    </select>
+                    <div>
+                        <button @click="submitForm(form.id)" type="button" class="submit-button btn upload">Save</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

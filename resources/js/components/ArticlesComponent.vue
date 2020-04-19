@@ -1,10 +1,10 @@
 <template>
-    <div class="container-xl">
+    <div class="container-xl main">
 
         <h1 class="section-title title-articles">Articles</h1>
         <div class="card mb-12 card-articles " v-for="(article,i) in articles" :key="i">
             <div class="row no-gutters justify-content-center ">
-                <div class="col-md-4 card-img-articles">
+                <div class="col-md-4">
                     <img :src="article.image" class="card-img" alt="">
                 </div>
                 <div class="col-md-8 ">
@@ -14,8 +14,8 @@
                             <h4>
                                 <a :href="'/articles/' + article.id">{{ article.title }}</a>
                             </h4>
-                            <p class="card-articles-category"><span class="material-icons ">bookmark_outline</span> {{
-                                article.category.title }}</p>
+                            <a :href="'/categories/' + article.category.title" class="card-articles-category"><span
+                                class="accent ">#</span>{{ article.category.title }}</a>
                         </div>
 
                         <div class="card-details">
@@ -34,9 +34,6 @@
                             <p class="card-excerpt">{{ article.excerpt }}</p>
                             <p class="card-author">By <a :href="'users/' + article.user.id" class="author">{{
                                 article.user.name }}</a> on {{ relativeDateTwo(article.created_at) }}</p>
-                            <div class="card-tags" v-for="(tag, j) in article.tags" :key="j">
-                                <span class="accent">#</span><a href="#">{{ tag.title }}</a>
-                            </div>
                         </div>
                     </div>
                 </div>

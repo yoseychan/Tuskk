@@ -1,0 +1,158 @@
+@import "variables";
+
+
+.card-latest {
+    max-width: 700px;
+    //padding:0;
+}
+
+.cimg {
+    height: 250px;
+    object-fit: cover;
+}
+
+.latest {
+    margin: 0;
+    //padding:0;
+
+}
+
+.card {
+    padding: 10px;
+    background-color: $body-bg;
+    border: none;
+    margin-bottom: 40px;
+    transition: .6s;
+}
+
+.card:hover {
+    -webkit-box-shadow: 5px 5px 24px 2px $purple;
+    -moz-box-shadow: 5px 5px 24px 2px $purple;
+    box-shadow: 5px 5px 24px 2px $purple;
+}
+
+.card-body {
+    text-align: left;
+    padding: 0;
+}
+
+.card-title {
+    font-size: 18px;
+    padding: 7px 0 0;
+    text-align: left;
+    min-height: 50px;
+
+    a {
+        text-decoration: none;
+        color: $white;
+        transition: .6s;
+    }
+
+    a:hover {
+        color: $magenta;
+    }
+}
+
+.card-details {
+    color: $dark-purple;
+    font-size: 14px;
+    text-align: left;
+
+    .material-icons {
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: $dark-purple;
+        transition: .6s;
+        text-transform: capitalize;
+    }
+    a:hover {
+        color: $light-purple;
+    }
+}
+
+.card-details > * {
+    display: inline-block;
+    padding: 0 7px;
+}
+
+.card-text {
+    color: $light-purple;
+
+}
+
+.card-excerpt {
+    min-height: 60px;
+}
+
+.card-author {
+    color: $dark-purple;
+    font-style: italic;
+    margin: 30px 0 0 0;
+
+    .author {
+        color: $ink;
+        text-align: left;
+        transition: .6s;
+    }
+    .author:hover {
+        text-decoration: underline;
+    }
+}
+
+.card-body-articles {
+    padding-left: 15px;
+
+    .card-title {
+        overflow: hidden;
+
+        h4{
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+
+            max-width:550px;
+            color: $light-purple;
+            float: right;
+
+            transition: .6s;
+        }
+        a:hover {
+            color: $magenta;
+        }
+    }
+}
+.card-author-article {
+    margin: 20px 0;
+}
+.card-author {
+    margin:0 0 10px ;
+}
+
+.card-articles {
+    //border-left: 5px solid $light-ink;
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.card-articles-category {
+    font-size: 15px;
+    color: $light-purple;
+    text-align: right;
+    text-transform: capitalize;
+    padding: 5px 10px;
+
+    .material-icons {
+        font-size: 15px;
+    }
+    a:hover, p:hover {
+        color: $magenta;
+        cursor: pointer;
+    }
+}
+

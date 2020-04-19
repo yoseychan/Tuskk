@@ -16,7 +16,7 @@ class ArticlesController extends Controller
     public function show($id)
     {
 
-          $article = Article::where('id', $id)->with(['user', 'category', 'tags', 'comments' => function ($query) {
+          $article = Article::where('id', $id)->with(['user', 'category', 'comments' => function ($query) {
             $query->with(['user'])->orderBy('created_at', 'desc');
         }])->orderBy('created_at', 'desc')->first();
 
@@ -26,7 +26,7 @@ class ArticlesController extends Controller
 
     public function forEdit($id)
     {
-         $article = Article::where('id', $id)->with(['user', 'category', 'tags'])->first();
+         $article = Article::where('id', $id)->with(['user', 'category'])->first();
 
          return view("editarticle",  compact("article"));
     }

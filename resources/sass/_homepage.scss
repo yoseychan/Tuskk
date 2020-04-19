@@ -1,13 +1,12 @@
 @import "partials/variables";
 
-
 //Featured - Hero
-
 
 .hero-img-featured {
     -webkit-box-shadow: 0 5px 10px 0 $purple;
     -moz-box-shadow: 0 5px 10px 0 $purple;
     box-shadow: 0 5px 10px 0 $purple;
+    width: 100%;
 
     img {
         max-height: 940px;
@@ -60,6 +59,7 @@ a.category {
         color: $magenta;
         transition: .6s;
     }
+
     .fl-left a:hover {
         background-color: $body-bg;
     }
@@ -69,7 +69,8 @@ a.category {
         color: $light-purple;
         transition: .6s;
     }
-     .fl-right a:hover {
+
+    .fl-right a:hover {
         background-color: $body-bg;
 
     }
@@ -84,30 +85,52 @@ a.category {
 
 }
 
-
-//Card
-
-.card-latest {
-    max-width: 700px;
-}
-
-.cimg {
-    height: 250px;
-    object-fit: cover;
-}
-
-.latest {
-    margin: 0;
-}
-
 //Banner
 
 .banner {
     background-color: $purple;
     width: 100%;
-    padding: 40px 0 60px;
-
+    padding: 40px 0;
     .container {
         padding: 10px;
+
+        .writer {
+            margin: 10px 0 60px;
+
+            h4 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $dark-purple;
+            }
+
+            .writer-btn {
+                color: $light-purple;
+                border: 1px solid $light-purple;
+                border-radius: 5px;
+                transition: .6s;
+                padding: 5px;
+            }
+
+            .writer-btn:hover {
+                color: $magenta;
+                border-color: $magenta;
+
+            }
+        }
+        .scores {
+            th {
+                font-size: 20px;
+                padding-bottom: 20px;
+                font-weight: 200;
+            }
+            td {
+                color: $dark-purple;
+            }
+        }
     }
 }
+
+

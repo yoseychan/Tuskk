@@ -15,34 +15,35 @@
                 <div class="writer">
                     <h4>Are you our new writer?</h4>
                     <p>We are looking for a new member for our news team!</p>
-                    <a href="#">Submit Application</a>
+                    <a href="#" class="writer-btn">Submit Application</a>
                 </div>
                 <table class="scores">
                     <tr>
-                        <th>Top 5 games of 2020</th>
+                        <th>Top 5 games to play in 2020</th>
                     </tr>
                     <tr>
-                        <td>Game 1</td>
-                        <td>100/100</td>
+                        <td>Animal Crossing</td>
+                        <td>98/100</td>
                     </tr>
                     <tr>
-                        <td>Game 2</td>
-                        <td>80/100</td>
-                    </tr>
-                    <tr>
-                        <td>Game 3</td>
-                        <td>67/100</td>
-                    </tr>
-                    <tr>
-                        <td>Game 4</td>
-                        <td>70/100</td>
-                    </tr>
-                    <tr>
-                        <td>Game 5</td>
+                        <td>Minecraft</td>
                         <td>91/100</td>
+                    </tr>
+                    <tr>
+                        <td>Call of Duty: MW </td>
+                        <td>87/100</td>
+                    </tr>
+                    <tr>
+                        <td>TemTem</td>
+                        <td>85/100</td>
+                    </tr>
+                    <tr>
+                        <td>Stardew valley</td>
+                        <td>79/100</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
+
 @endsection

@@ -8,17 +8,24 @@ html, body {
     height: 100vh;
     margin: 0;
 }
+
+#app {
+    width: 100%;
+
+}
+
 .pointer {
     cursor: pointer;
 }
+
 a:-webkit-any-link {
-    //color: $light-purple;
-    //cursor: pointer;
     text-decoration: none;
 }
+
 a:hover {
-    color:$magenta;
+    color: $magenta;
 }
+
 .main {
     min-height: 800px;
 }
@@ -34,15 +41,37 @@ a:hover {
     color: $magenta;
 }
 
-//login form
-.login {
-    height: 680px;
+//login and register form
 
+#register {
+    margin-top: 200px;
 }
 
 #login {
     background-color: $purple;
     margin-top: 200px;
+    label{
+        color:$dark-purple;
+    }
+    input {
+        background-color:$body-bg ;
+        border-color: $dark-purple;
+        color: $light-purple;
+    }
+    input:focus {
+        outline: none;
+        border: 1px solid $light-purple;
+    }
+    .btn {
+        color:$light-purple;
+        background-color: $purple;
+        border: 1px solid $light-purple;
+        transition: .6s;
+    }
+    .btn:hover{
+        color:$magenta;
+        border-color: $magenta;
+    }
 }
 
 //Hero Universal
@@ -68,100 +97,15 @@ a:hover {
     font-size: 18px;
 }
 
+.about-text {
+    text-align: justify;
+}
 
 //Cards Universal
-
-.card {
-    padding: 10px;
-    background-color: $body-bg;
-    border: none;
-    margin-bottom: 40px;
-    transition: .6s;
-}
-
-.card:hover {
-    -webkit-box-shadow: 5px 5px 24px 2px $purple;
-    -moz-box-shadow: 5px 5px 24px 2px $purple;
-    box-shadow: 5px 5px 24px 2px $purple;
-}
-
-.card-body {
-    text-align: left;
-    padding: 0;
-}
-
-.card-title {
-    font-size: 18px;
-    padding: 7px 0 0;
-    text-align: left;
-    min-height: 50px;
-
-    a {
-        text-decoration: none;
-        color: $white;
-        transition: .6s;
-    }
-
-    a:hover {
-        color: $magenta;
-    }
-}
-
-.card-details {
-    color: $dark-purple;
-    font-size: 12px;
-    text-align: left;
-
-    .material-icons {
-        font-size: 12px;
-    }
-}
-
-.card-details > * {
-    display: inline-block;
-    padding: 0 7px;
-}
-
-.card-text {
-    color: $light-purple;
-
-}
-
-.card-excerpt {
-    min-height: 69px;
-}
-
-.card-author {
-    color: $dark-purple;
-    font-style: italic;
-
-    .author {
-        color: $ink;
-        text-align: left;
-    }
-}
-
-.card-tags {
-    display: inline-block;
-    padding: 0 5px;
-
-    a {
-        text-decoration: none;
-        color: $dark-purple;
-        transition: .6s;
-
-    }
-
-    a:hover {
-        color: $light-purple;
-    }
-}
-
 
 .alert {
     color: salmon;
 }
-
 
 
 //category buttons
@@ -173,6 +117,7 @@ a:hover {
     text-transform: uppercase;
     text-decoration: none;
     border: 3px solid $light-purple;
+    border-radius: 5px;
     padding: 20px 40px;
     width: 400px;
     transition: .6s;
@@ -235,22 +180,39 @@ a:hover {
     text-transform: capitalize;
 }
 
+//admin user management
+
 .admin {
     color: $light-purple;
 }
 
-.action-icon {
-    transition: .6s;
+.admin-btn {
+    overflow: hidden;
+
+    p {
+        display: inline-block;
+        padding: 0 10px;
+        float: right;
+    }
+
+    .action-icon {
+
+        color: $light-purple;
+        transition: .6s;
+        float: right;
+    }
+
+    .action-icon:hover {
+        color: $magenta;
+    }
+
 }
 
-.action-icon:hover {
-    color: $magenta;
-}
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th  {
-    background:$purple ;
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background: $purple;
     color: $light-purple;
 }
+
 .table-hover thead tr {
     background-color: $purple;
     border-color: $dark-purple;
@@ -261,9 +223,58 @@ a:hover {
     vertical-align: bottom;
     border-bottom: 2px solid $table-line;
 }
+
 .table th, .table td {
-        border-top: 1px solid $table-line;
+    border-top: 1px solid $table-line;
 }
 
+.table {
+    margin-bottom: 100px;
+}
+// EDIT AND CREATE ARTICLE FORMS
+.form-group {
+    margin: 0 auto;
+    max-width: 600px;
+    color: $light-purple;
 
+    input, textarea, select {
+        background-color: $body-bg;
+        border-color: $dark-purple;
+        color: $light-purple;
+    }
+    input::placeholder, textarea::placeholder{
+        color: $dark-purple;
+    }
+    textarea{
+        min-height: 200px;
+    }
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        background-color: $body-bg;
+        border: 1px solid $light-purple;
+        color: $light-purple;
+    }
 
+    .btn {
+        color: $light-purple;
+        background-color: $purple;
+        border: 1px solid $light-purple;
+        transition: .6s;
+        margin: 20px 0 60px;
+    }
+
+    .btn:hover {
+        color: $magenta;
+        border-color: $magenta;
+    }
+    .upload {
+        width: 100%;
+    }
+
+}
+.form-group > * {
+    margin-bottom: 10px;
+}
+.submitArticle {
+    width: 100%;
+}

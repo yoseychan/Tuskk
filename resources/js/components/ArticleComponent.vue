@@ -6,16 +6,16 @@
                     :src="article.image"
                     alt="">
                 <div class="text-article text-article-single">
-                    <h5 class="accent category"> {{ article.category.title }}</h5>
+                    <a class="accent category" :href="'/categories/' + article.category.title"> {{ article.category.title }}</a>
                     <h1 class="title"> {{ article.title }}</h1>
                     <div class="card-details">
                         <div><span class="material-icons">query_builder</span>{{ relativeDate(article.created_at)  }}</div>
                         <div><span class="material-icons">chat_bubble_outline</span>{{ article.comments.length }}</div>
-                        <div><span @click="like(article.id)">
+                        <div class="pointer" @click="like(article.id)">
                             <span v-if="article.if_i_liked" class="material-icons accent">favorite_border</span>
                             <span v-else class="material-icons">favorite_border</span>
                             {{ article.likes_count }}
-                        </span></div>
+                       </div>
                     </div>
                     <div class="card-author-article">
                         <p class="card-author">By <a :href="'/users/' + article.user.id" class="author">{{article.user.name
@@ -27,9 +27,6 @@
         <div class="container-fluid">
             <div class="body-article ">
                 <p>{{ article.body}}</p>
-                <div class="card-tags" v-for="(tag, j) in article.tags" :key="j">
-                    <span class="accent">#</span><a href="#">{{ tag.title }}</a>
-                </div>
             </div>
         </div>
     </div>

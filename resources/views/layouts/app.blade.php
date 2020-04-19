@@ -70,7 +70,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                 @can('manage-users', Auth::user())
+                                @can('manage-users', Auth::user())
                                     <a class="dropdown-item" href="{{ url('admin/users') }}">Manage users</a>
                                 @endcan
                                 @can('manage-article', Auth::user())
@@ -102,44 +102,20 @@
     <footer>
         <div class="container">
             <div class="row justify-content-between">
+                <div class="menu social">
+                    <li><a target="_blank" href="https://twitter.com/home?lang=en"><i class="fab fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.reddit.com/"><i class="fab fa-reddit"></i></a></li>
+                </div>
                 <div class="menu ">
-                    <p>Menu</p>
                     <ul>
                         <li><a href="{{ url('articles') }}">Articles</a></li>
                         <li><a href="{{ url('categories') }}">Categories</a></li>
-                        <li><a href="#">Esports</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register Now</a></li>
-                    </ul>
-                </div>
-                <div class="menu">
-                    <p>Menu</p>
-                    <ul>
-                        <li><a href="{{ url('articles') }}">Articles</a></li>
-                        <li><a href="{{ url('categories') }}">Categories</a></li>
-                        <li><a href="#">Esports</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register Now</a></li>
-                    </ul>
-                </div>
-                <div class="menu">
-                    <p>Menu</p>
-                    <ul>
-                        <li><a href="{{ url('articles') }}">Articles</a></li>
-                        <li><a href="{{ url('categories') }}">Categories</a></li>
-                        <li><a href="#">Esports</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register Now</a></li>
-                    </ul>
-                </div>
-                <div class="menu">
-                    <p>Menu</p>
-                    <ul>
-                        <li><a href="{{ url('articles') }}">Articles</a></li>
-                        <li><a href="{{ url('categories') }}">Categories</a></li>
-                        <li><a href="#">Esports</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register Now</a></li>
+                        <li><a href="/categories/esports">eSports</a></li>
+                         <li><a href="/team">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -147,5 +123,7 @@
         <div class="tusk">Tuskk</div>
     </footer>
 </div>
+<script src="https://kit.fontawesome.com/11a1857992.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
