@@ -1,4 +1,4 @@
-![Tuskk](https://gyazo.com/b390e9ee7e91d03c80be6bdf04ec7b0e)
+![Tuskk](https://github.com/yoseychan/Tuskk/public/image/Tuskk.png)
 
 ## About Tuskk
 Tuskk is a small gaming news website.The team of Tuskk publish informative articles for all game enthusiasts to read, 

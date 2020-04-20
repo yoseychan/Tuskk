@@ -16,7 +16,7 @@
                 <th scope="row">{{ user.id }}</th>
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.role_id}}</td>
+                <td class="role">{{ user.role.name }}</td>
                 <td class="admin-btn">
                     <p v-if="loggedUser.role_id == 1 && user.role_id !== 1" class=" action-icon pointer"
                        @click="deleteUser(user.id)">

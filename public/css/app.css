@@ -11171,6 +11171,10 @@ a:hover {
   color: #CEC2D2;
 }
 
+.role {
+  text-transform: capitalize;
+}
+
 .admin-btn {
   overflow: hidden;
 }
@@ -11442,6 +11446,10 @@ a.category {
   margin: 30px 10%;
   text-align: justify;
   margin-bottom: 120px;
+}
+
+.guest {
+  color: #918397;
 }
 
 .comment-section {

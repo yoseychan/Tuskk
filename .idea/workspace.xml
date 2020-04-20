@@ -152,15 +152,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\public" />
       <recent name="C:\laragon\www\Tuskk\resources\views" />
       <recent name="C:\laragon\www\Tuskk\resources\js\components\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\errors" />
-      <recent name="C:\laragon\www\Tuskk\resources\sass\errors" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,7 +189,8 @@
       <workItem from="1587118625402" duration="37656000" />
       <workItem from="1587240687306" duration="9843000" />
       <workItem from="1587294784755" duration="5817000" />
-      <workItem from="1587300678942" duration="34143000" />
+      <workItem from="1587300678942" duration="34475000" />
+      <workItem from="1587379498888" duration="3985000" />
     </task>
     <servers />
   </component>

@@ -185,7 +185,9 @@ a:hover {
 .admin {
     color: $light-purple;
 }
-
+.role {
+    text-transform: capitalize;
+}
 .admin-btn {
     overflow: hidden;
 
