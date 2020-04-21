@@ -152,15 +152,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Tuskk\public" />
       <recent name="C:\laragon\www\Tuskk\resources\views" />
       <recent name="C:\laragon\www\Tuskk\resources\js\components\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\admin" />
       <recent name="C:\laragon\www\Tuskk\resources\views\errors" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Tuskk\storage\app\public\avatar" />
     </key>
   </component>
   <component name="RunManager">
@@ -190,7 +190,10 @@
       <workItem from="1587240687306" duration="9843000" />
       <workItem from="1587294784755" duration="5817000" />
       <workItem from="1587300678942" duration="34475000" />
-      <workItem from="1587379498888" duration="4082000" />
+      <workItem from="1587379498888" duration="4203000" />
+      <workItem from="1587406822772" duration="4896000" />
+      <workItem from="1587414520066" duration="1214000" />
+      <workItem from="1587476969135" duration="936000" />
     </task>
     <servers />
   </component>
@@ -214,10 +217,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587053392614" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1587118916481">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1587411356473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587118916481" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587411356473" />
     <state x="623" y="225" width="672" height="676" key="search.everywhere.popup" timestamp="1587249607736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

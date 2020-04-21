@@ -1,7 +1,7 @@
 ![Tuskk](https://github.com/yoseychan/Tuskk/blob/master/public/image/Tuskk.png)
 
 ## About Tuskk
-Tuskk is a small gaming news website.The team of Tuskk publish informative articles for all game enthusiasts to read, 
+Tuskk is a small gaming news website. The small team of Tuskk publish informative articles for all game enthusiasts to read, 
 like and comment.
 
 ## Built with:
